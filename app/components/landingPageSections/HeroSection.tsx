@@ -1,6 +1,7 @@
 import Image from "next/image";
 import InfiniteCarousel from "../InfiniteCarousel";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -32,10 +33,12 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <button className="flex items-center gap-2 px-8 py-3 bg-bg-red border border-bg-red text-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red transition-all duration-300 group">
-              View Portfolio <ArrowRight size={16} className="rotate-45" />
+              <Link href="/portfolio" className="flex">
+                View Portfolio <ArrowRight size={16} className="rotate-45" />
+              </Link>
             </button>
             <button className="px-8 py-3 border border-white text-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red transition-all duration-300">
-              Start Your Story
+              <Link href="/portfolio">Start Your Story</Link>
             </button>
           </div>
 

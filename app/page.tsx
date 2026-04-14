@@ -31,13 +31,13 @@ export default function Home() {
         <nav>
           <ul className="flex items-center gap-10 text-xs uppercase tracking-[0.15em]">
             <li className="hover:text-hover-red hover:underline underline-offset-8 transition-colors cursor-pointer">
-              Portfolio
+              <Link href="/portfolio">Portfolio</Link>
             </li>
             <li className="hover:text-hover-red hover:underline underline-offset-8 transition-colors cursor-pointer">
-              About
+              <Link href="/portfolio">About</Link>
             </li>
             <li className="hover:text-hover-red hover:underline underline-offset-8 transition-colors cursor-pointer">
-              Contact
+              <Link href="/portfolio">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -59,7 +59,7 @@ export default function Home() {
             </svg>
           </button>
           <button className="px-6 py-3 border border-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red hover:text-white transition-all duration-300">
-            Book a session
+            <Link href="/portfolio">Book a session</Link>
           </button>
         </div>
       </header>
