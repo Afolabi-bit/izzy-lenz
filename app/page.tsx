@@ -42,25 +42,11 @@ export default function Home() {
           </ul>
         </nav>
         <div className="flex items-center gap-6">
-          <button className="w-8 h-8 flex items-center justify-center hover:scale-110 hover:text-hover-red transition-all">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </button>
-          <button className="px-6 py-3 border border-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red hover:text-white transition-all duration-300">
-            <Link href="/portfolio">Book a session</Link>
-          </button>
+          <Link href="/portfolio" className="cursor-pointer">
+            <button className="px-6 py-3 border border-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red hover:text-white transition-all duration-300">
+              Book a session
+            </button>
+          </Link>
         </div>
       </header>
       <main className="bg-black">

@@ -26,10 +26,12 @@ export default function CTASection() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="flex items-center gap-2 px-8 py-3 bg-bg-red border border-bg-red text-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red transition-all duration-300 cursor-pointer group">
-            <LuCalendarHeart className="group-hover:translate-x-[-2px] transition-all duration-300" />
-            <Link href="/portfolio">Book a consultation</Link>
-          </button>
+          <Link href="/portfolio">
+            <button className="flex items-center gap-2 px-8 py-3 bg-bg-red border border-bg-red text-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red transition-all duration-300 cursor-pointer group">
+              <LuCalendarHeart className="group-hover:translate-x-[-2px] transition-all duration-300" />
+              Book a consultation
+            </button>
+          </Link>
 
           <a
             href="https://wa.link/yswhaa"

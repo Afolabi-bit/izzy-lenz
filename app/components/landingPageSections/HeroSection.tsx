@@ -32,14 +32,16 @@ export default function HeroSection() {
             promises that make your love story uniquely yours.
           </p>
           <div className="flex flex-wrap items-center gap-4">
-            <button className="flex items-center gap-2 px-8 py-3 bg-bg-red border border-bg-red text-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red transition-all duration-300 group">
-              <Link href="/portfolio" className="flex">
+            <Link href="/portfolio" className="flex cursor-pointer">
+              <button className="flex items-center gap-2 px-8 py-3 bg-bg-red border border-bg-red text-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red transition-all duration-300 group">
                 View Portfolio <ArrowRight size={16} className="rotate-45" />
-              </Link>
-            </button>
-            <button className="px-8 py-3 border border-white text-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red transition-all duration-300">
-              <Link href="/portfolio">Start Your Story</Link>
-            </button>
+              </button>
+            </Link>
+            <Link href="/portfolio" className="cursor-pointer">
+              <button className="px-8 py-3 border border-white text-white text-xs uppercase tracking-widest hover:bg-hover-red hover:border-hover-red transition-all duration-300">
+                Start Your Story
+              </button>
+            </Link>
           </div>
 
           {/* Metrics Row */}
