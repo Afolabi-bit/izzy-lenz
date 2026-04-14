@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function SpotlightSection() {
   return (
     <section className="py-28 px-10">
-      <p className="text-center text-sm uppercase tracking-widest text-bg-red font-semibold drop-shadow-md opacity-90 mb-10">
+      <p className="text-center text-sm uppercase tracking-widest text-bg-red font-semibold drop-shadow-md opacity-90 mb-5">
         weekly spotlight
       </p>
       <h2 className="capitalize text-center font-bold text-2xl md:text-5xl font-heading">
@@ -59,7 +59,7 @@ export default function SpotlightSection() {
                 need someone ready to witness them.
               </p>
             </div>
-            <div className="relative pl-4 mt-4">
+            <div className="relative pl-4 mt-4 py-1">
               <span className="absolute top-0 left-0 w-[2px] h-full bg-bg-red/50"></span>
               <p className="text-base text-white mb-2 leading-tight">
                 "Anderson didn't just photograph our wedding — he preserved the

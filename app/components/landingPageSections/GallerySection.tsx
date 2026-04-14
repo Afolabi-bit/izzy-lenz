@@ -7,7 +7,9 @@ export default function GallerySection() {
     <section className="px-10 py-28 ">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-xl tracking-wide mb-5">Featured Works</p>
+          <p className=" text-sm uppercase tracking-widest font-semibold drop-shadow-md opacity-90 mb-5">
+            Featured Works
+          </p>
           <h2 className="text-5xl font-heading font-bold tracking-tight  mb-6 drop-shadow-lg">
             Recent{" "}
             <span className="text-bg-red font-semibold italic">

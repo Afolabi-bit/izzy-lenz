@@ -5,6 +5,9 @@ import Link from "next/link";
 import GallerySection from "./components/landingPageSections/GallerySection";
 import SpotlightSection from "./components/landingPageSections/SpotlightSection";
 import HeroSection from "./components/landingPageSections/HeroSection";
+import TestimonialsSection from "./components/landingPageSections/TestimonialsSection";
+import CTASection from "./components/landingPageSections/CTASection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -64,7 +67,10 @@ export default function Home() {
         <HeroSection />
         <GallerySection />
         <SpotlightSection />
+        <TestimonialsSection />
+        <CTASection />
       </main>
+      <Footer />
     </>
   );
 }
