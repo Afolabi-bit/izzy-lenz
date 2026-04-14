@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { Star, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import InfiniteCarousel from "./components/InfiniteCarousel";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,13 +24,13 @@ export default function Home() {
         </div>
         <nav>
           <ul className="flex items-center gap-10 text-xs uppercase tracking-[0.15em]">
-            <li className="hover:text-hover-red transition-colors cursor-pointer">
-              Home
+            <li className="hover:text-hover-red hover:underline underline-offset-8 transition-colors cursor-pointer">
+              Portfolio
             </li>
-            <li className="hover:text-hover-red transition-colors cursor-pointer">
+            <li className="hover:text-hover-red hover:underline underline-offset-8 transition-colors cursor-pointer">
               About
             </li>
-            <li className="hover:text-hover-red transition-colors cursor-pointer">
+            <li className="hover:text-hover-red hover:underline underline-offset-8 transition-colors cursor-pointer">
               Contact
             </li>
           </ul>
@@ -66,7 +68,7 @@ export default function Home() {
             quality={100}
           />
           {/* Cinematic Vignette Overlay */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]"></div>
           {/* Subtle gradient to anchor the bottom */}
           <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-80"></div>
           {/* Dark overlay for text contrast */}
@@ -94,26 +96,26 @@ export default function Home() {
               {/* Metrics Row */}
               <div className="mt-12 flex items-center divide-x divide-white/20 text-white">
                 <div className="flex flex-col pr-6 md:pr-8">
-                  <span className="text-xl md:text-5xl tracking-normal mb-1 drop-shadow-md text-bg-red font-curvy">
+                  <span className="text-sm md:text-lg tracking-normal mb-1 drop-shadow-md font-curvy">
                     500+
                   </span>
-                  <span className="text-[10px] md:text-lg text-gray-200 opacity-90 tracking-wide">
+                  <span className="text-[10px] text-gray-200 drop-shadow-md opacity-90 tracking-wide">
                     Weddings
                   </span>
                 </div>
                 <div className="flex flex-col px-6 md:px-8">
-                  <span className="text-xl md:text-5xl tracking-normal mb-1 drop-shadow-md text-bg-red font-curvy">
+                  <span className="text-sm md:text-lg tracking-normal mb-1 drop-shadow-md font-curvy">
                     5
                   </span>
-                  <span className="text-[10px] md:text-lg text-gray-200 opacity-90 tracking-wide">
+                  <span className="text-[10px] text-gray-200 drop-shadow-md opacity-90 tracking-wide">
                     Years of passion
                   </span>
                 </div>
                 <div className="flex flex-col pl-6 md:pl-8">
-                  <span className="text-xl md:text-5xl tracking-normal mb-1 drop-shadow-md text-bg-red font-curvy">
+                  <span className="text-sm md:text-lg tracking-normal mb-1 drop-shadow-md font-curvy">
                     20+
                   </span>
-                  <span className="text-[10px] md:text-lg text-gray-200 opacity-90 tracking-wide">
+                  <span className="text-[10px] text-gray-200 drop-shadow-md opacity-90 tracking-wide">
                     Active team members
                   </span>
                 </div>
@@ -122,33 +124,142 @@ export default function Home() {
           </div>
 
           {/* Infinite Carousel Advertisement */}
-          <div className="absolute bottom-0 w-full overflow-hidden border-t border-white/10 bg-black/40 backdrop-blur-md py-4 z-20 carousel-wrapper cursor-pointer">
-            <div className="flex w-[200%] animate-slide whitespace-nowrap text-xs md:text-sm uppercase tracking-widest text-gray-300">
-              {/* Part 1 */}
-              <div className="flex w-1/2 items-center justify-around px-4">
-                <span>Intimate Ceremonies</span>
-                <Star size={14} className="text-bg-red shrink-0" />
-                <span>Engagements</span>
-                <Star size={14} className="text-bg-red shrink-0" />
-                <span>Bridal Portraits</span>
-                <Star size={14} className="text-bg-red shrink-0" />
-                <span>Preweddings</span>
-                <Star size={14} className="text-bg-red shrink-0" />
-                <span>Weddings</span>
-                <Star size={14} className="text-bg-red shrink-0" />
+          <InfiniteCarousel />
+        </section>
+
+        <section className="px-10 py-28 ">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-xl tracking-wide mb-5">Featured Works</p>
+              <h2 className="text-5xl font-heading font-bold tracking-tight  mb-6 drop-shadow-lg">
+                Recent{" "}
+                <span className="text-bg-red font-semibold italic">
+                  Love Stories
+                </span>
+              </h2>
+            </div>
+            <div>
+              <Link
+                href="/portfolio"
+                className="text-bg-red flex items-center gap-2"
+              >
+                View all collections <ArrowRight size={16} className="" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="w-full h-[670px] flex gap-5 overflow-hidden">
+            <div className="w-1/2 h-full relative hover:scale-102 transition-all duration-500 rounded-2xl">
+              <Image
+                src="/w/w9.jpg"
+                className="object-cover object-center absolute top-0 left-0 rounded-2xl"
+                alt="Ayomide and Olawole"
+                fill
+                priority
+                quality={100}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="w-full h-full absolute top-0 left-0 rounded-2xl bg-linear-to-b from-transparent to-black/80 z-10 opacity-0 hover:opacity-100 transition-all duration-500 ">
+                <div className="absolute bottom-0 left-0 p-10">
+                  <p className="text-sm text-bg-red italic font-heading tracking-wide mb-2">
+                    The <span className="">BLUSHOFLOVE26</span>
+                  </p>
+                  <h3 className="text-xl font-heading font-bold tracking-tight  mb-3 drop-shadow-lg">
+                    Ayomide & Olawole
+                  </h3>
+                  <p className="text-sm tracking-wide mb-2">February, 2026</p>
+                </div>
               </div>
-              {/* Part 2 */}
-              <div className="flex w-1/2 items-center justify-around px-4">
-                <span>Intimate Ceremonies</span>
-                <Star size={14} className="text-bg-red shrink-0" />
-                <span>Engagements</span>
-                <Star size={14} className="text-bg-red shrink-0" />
-                <span>Bridal Portraits</span>
-                <Star size={14} className="text-bg-red shrink-0" />
-                <span>Preweddings</span>
-                <Star size={14} className="text-bg-red shrink-0" />
-                <span>Weddings</span>
-                <Star size={14} className="text-bg-red shrink-0" />
+            </div>
+
+            <div className="w-1/2 h-full grid grid-cols-2 grid-rows-2 gap-5">
+              <div className="w-full h-full relative hover:scale-102 transition-all duration-500 ">
+                <Image
+                  src="/tc/tc3.jpg"
+                  className="object-cover object-center absolute top-0 left-0 rounded-2xl"
+                  alt="Ayomide and Olawole"
+                  fill
+                  priority
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="w-full h-full absolute top-0 left-0 rounded-2xl bg-linear-to-b from-transparent to-black/80 z-10 opacity-0 hover:opacity-100 transition-all duration-500 ">
+                  <div className="absolute bottom-0 left-0 p-10">
+                    <p className="text-sm text-bg-red italic font-heading tracking-wide mb-2">
+                      The <span className="">BLUSHOFLOVE26</span>
+                    </p>
+                    <h3 className="text-xl font-heading font-bold tracking-tight  mb-3 drop-shadow-lg">
+                      Ayomide & Olawole
+                    </h3>
+                    <p className="text-sm tracking-wide mb-2">February, 2026</p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-full relative hover:scale-102 transition-all duration-500 ">
+                <Image
+                  src="/pa/p3.jpg"
+                  className="object-cover object-center absolute top-0 left-0 rounded-2xl"
+                  alt="Ayomide and Olawole"
+                  fill
+                  priority
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="w-full h-full absolute top-0 left-0 rounded-2xl bg-linear-to-b from-transparent to-black/80 z-10 opacity-0 hover:opacity-100 transition-all duration-500 ">
+                  <div className="absolute bottom-0 left-0 p-10">
+                    <p className="text-sm text-bg-red italic font-heading tracking-wide mb-2">
+                      The <span className="">BLUSHOFLOVE26</span>
+                    </p>
+                    <h3 className="text-xl font-heading font-bold tracking-tight  mb-3 drop-shadow-lg">
+                      Ayomide & Olawole
+                    </h3>
+                    <p className="text-sm tracking-wide mb-2">February, 2026</p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-full relative hover:scale-102 transition-all duration-500 ">
+                <Image
+                  src="/ta/ta4.jpg"
+                  className="object-cover object-center absolute top-0 left-0 rounded-2xl"
+                  alt="Ayomide and Olawole"
+                  fill
+                  priority
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="w-full h-full absolute top-0 left-0 rounded-2xl bg-linear-to-b from-transparent to-black/80 z-10 opacity-0 hover:opacity-100 transition-all duration-500 ">
+                  <div className="absolute bottom-0 left-0 p-10">
+                    <p className="text-sm text-bg-red italic font-heading tracking-wide mb-2">
+                      The <span className="">BLUSHOFLOVE26</span>
+                    </p>
+                    <h3 className="text-xl font-heading font-bold tracking-tight  mb-3 drop-shadow-lg">
+                      Ayomide & Olawole
+                    </h3>
+                    <p className="text-sm tracking-wide mb-2">February, 2026</p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-full relative hover:scale-102 transition-all duration-500 ">
+                <Image
+                  src="/tb/tb1.jpg"
+                  className="object-cover object-center absolute top-0 left-0 rounded-2xl"
+                  alt="Ayomide and Olawole"
+                  fill
+                  priority
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="w-full h-full absolute top-0 left-0 rounded-2xl bg-linear-to-b from-transparent to-black/80 z-10 opacity-0 hover:opacity-100 transition-all duration-500 ">
+                  <div className="absolute bottom-0 left-0 p-10">
+                    <p className="text-sm text-bg-red italic font-heading tracking-wide mb-2">
+                      The <span className="">BLUSHOFLOVE26</span>
+                    </p>
+                    <h3 className="text-xl font-heading font-bold tracking-tight  mb-3 drop-shadow-lg">
+                      Ayomide & Olawole
+                    </h3>
+                    <p className="text-sm tracking-wide mb-2">February, 2026</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

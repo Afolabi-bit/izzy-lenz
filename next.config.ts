@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [100, 75],
   },
+  allowedDevOrigins: ["untagged-strife-starch.ngrok-free.dev"],
 };
 
 export default nextConfig;
