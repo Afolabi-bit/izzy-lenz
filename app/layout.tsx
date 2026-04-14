@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={` ${notoSans.variable} ${jetBrainsMono.variable} ${raleway.variable} h-full antialiased`}
+      className={` ${notoSans.variable} ${jetBrainsMono.variable} ${raleway.variable} h-full antialiased text-white`}
     >
       <body className="font-sans min-h-full flex flex-col">{children}</body>
     </html>
