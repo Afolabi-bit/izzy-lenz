@@ -12,7 +12,7 @@ export default function CTASection() {
         </p>
 
         {/* Heading */}
-        <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+        <h2 className="text-5xl md:text-6xl text-white font-bold leading-tight mb-6">
           Your Perfect Day <br />
           Made <span className="text-bg-red italic">Izzy</span>
         </h2>

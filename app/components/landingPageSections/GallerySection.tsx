@@ -52,7 +52,7 @@ function GalleryItem({ item, priority = false }: any) {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 rounded-2xl bg-linear-to-b from-transparent to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-transparent to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
         <div className="absolute bottom-0 left-0 p-5 md:p-8">
           <p className="text-xs text-bg-red italic font-heading mb-1">
             {item.tag}
