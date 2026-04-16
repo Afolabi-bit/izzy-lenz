@@ -35,7 +35,7 @@ export default function SpotlightSection() {
             </div>
             <div>
               {" "}
-              <p className="text-[16px] font-bold">Anderson Ezeh</p>
+              <p className="text-[16px] text-white font-bold">Anderson Ezeh</p>
               <p className="text-xs text-white/70">Lead Photographer</p>
             </div>
           </div>
