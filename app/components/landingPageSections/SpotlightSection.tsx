@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SpotlightSection() {
   return (
-    <section className="py-28 px-10">
+    <section className="py-28 text-white px-10">
       <p className="text-center text-sm uppercase tracking-widest text-bg-red font-semibold drop-shadow-md opacity-90 mb-5">
         weekly spotlight
       </p>
@@ -42,7 +42,7 @@ export default function SpotlightSection() {
 
           <div className="flex flex-col">
             <div>
-              <h2 className="font-heading text-4xl font-bold mb-6">
+              <h2 className="font-heading text-white text-4xl font-bold mb-6">
                 "The First Look That Stopped Time"
               </h2>
               <p className="text-base text-white mb-4 leading-loose">
