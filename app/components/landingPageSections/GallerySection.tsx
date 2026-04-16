@@ -72,7 +72,7 @@ function GalleryItem({ item, priority = false }: any) {
 
 export default function GallerySection() {
   return (
-    <section className="px-10 py-28">
+    <section className="px-10 py-28 text-white">
       {/* Header */}
       <div className="flex items-center justify-between mb-10">
         <div>

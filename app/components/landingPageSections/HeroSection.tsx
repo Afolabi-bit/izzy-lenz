@@ -12,7 +12,7 @@ const InfiniteCarousel = dynamic(() => import("../InfiniteCarousel"), {
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden text-white">
       {/* Optimized Hero Image */}
       <Image
         src="/hero1.jpg"

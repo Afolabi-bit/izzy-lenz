@@ -97,7 +97,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="px-10 py-28">
+    <section className="px-10 py-28 text-white">
       <div className="flex items-center justify-between">
         <div>
           <p className="text-sm uppercase tracking-widest text-bg-red font-semibold drop-shadow-md opacity-90 mb-5">
