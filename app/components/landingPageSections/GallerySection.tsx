@@ -40,30 +40,33 @@ const images = [
 
 function GalleryItem({ item, priority = false }: any) {
   return (
-    <div className="relative group overflow-hidden rounded-2xl w-full h-full">
-      <Image
-        src={item.src}
-        alt={item.title}
-        fill
-        sizes={item.large ? "50vw" : "(max-width: 768px) 100vw, 25vw"}
-        quality={70}
-        priority={priority}
-        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-      />
+    <Link href="/portfolio">
+      {" "}
+      <div className="relative group overflow-hidden rounded-2xl w-full h-full cursor-pointer">
+        <Image
+          src={item.src}
+          alt={item.title}
+          fill
+          sizes={item.large ? "50vw" : "(max-width: 768px) 100vw, 25vw"}
+          quality={70}
+          priority={priority}
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-transparent to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <div className="absolute bottom-0 left-0 p-5 md:p-8">
-          <p className="text-xs text-bg-red italic font-heading mb-1">
-            {item.tag}
-          </p>
-          <h3 className="text-sm md:text-lg font-heading font-bold mb-1">
-            {item.title}
-          </h3>
-          <p className="text-[10px] md:text-xs">{item.date}</p>
+        {/* Overlay */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-transparent to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className="absolute bottom-0 left-0 p-5 md:p-8">
+            <p className="text-xs text-bg-red italic font-heading mb-1">
+              {item.tag}
+            </p>
+            <h3 className="text-sm md:text-lg font-heading font-bold mb-1">
+              {item.title}
+            </h3>
+            <p className="text-[10px] md:text-xs">{item.date}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
