@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
           <p className="text-sm uppercase tracking-widest text-bg-red font-semibold drop-shadow-md opacity-90 mb-5">
             Love Stories
           </p>
-          <h2 className="text-5xl font-heading font-bold tracking-tight  mb-6 drop-shadow-lg">
+          <h2 className="text-5xl font-heading font-bold text-white tracking-tight  mb-6 drop-shadow-lg">
             From Our{" "}
             <span className="text-bg-red font-semibold italic">Couples</span>
           </h2>

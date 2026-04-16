@@ -6,7 +6,7 @@ export default function SpotlightSection() {
       <p className="text-center text-sm uppercase tracking-widest text-bg-red font-semibold drop-shadow-md opacity-90 mb-5">
         weekly spotlight
       </p>
-      <h2 className="capitalize text-center font-bold text-2xl md:text-5xl font-heading">
+      <h2 className="capitalize text-center text-white font-bold text-2xl md:text-5xl font-heading">
         Photo of the{" "}
         <span className="text-bg-red italic font-semibold ">Week</span>
       </h2>

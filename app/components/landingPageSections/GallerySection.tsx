@@ -10,7 +10,7 @@ export default function GallerySection() {
           <p className=" text-sm uppercase tracking-widest font-semibold drop-shadow-md opacity-90 mb-5">
             Featured Works
           </p>
-          <h2 className="text-5xl font-heading font-bold tracking-tight  mb-6 drop-shadow-lg">
+          <h2 className="text-5xl font-heading font-bold text-white tracking-tight  mb-6 drop-shadow-lg">
             Recent{" "}
             <span className="text-bg-red font-semibold italic">
               Love Stories
