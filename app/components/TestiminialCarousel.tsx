@@ -48,7 +48,7 @@ export default function TestimonialsCarousel({ testimonials }: Props) {
       onMouseLeave={() => (isHovered.current = false)}
     >
       {/* ✅ h-96 gives enough room so scaled cards don't overflow into the dots */}
-      <div className="max-w-7xl mx-auto relative h-96">
+      <div className="max-w-7xl mx-auto relative h-100">
         {testimonials.map((t, i) => {
           const offset = getOffset(i);
           const isCenter = offset === 0;
@@ -57,7 +57,7 @@ export default function TestimonialsCarousel({ testimonials }: Props) {
           return (
             <motion.div
               key={t.id}
-              className="absolute top-0 left-1/2 w-[85%] md:w-[45%] lg:w-[30%]"
+              className="absolute top-0 left-1/2 w-[85%] md:w-[45%] lg:w-[32%]"
               style={{ translateX: "-50%" }}
               animate={{
                 x: offset * 320,
@@ -76,7 +76,7 @@ export default function TestimonialsCarousel({ testimonials }: Props) {
                     </span>
                   ))}
                 </div>
-                <p className="text-lg leading-relaxed mb-6 italic">
+                <p className="text-base leading-relaxed mb-6 italic">
                   "{t.text}"
                 </p>
                 <div>
